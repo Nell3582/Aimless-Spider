@@ -44,6 +44,7 @@ $.idx = ($.idx = ($.getval("hotsooncount") || "1") - 1) > 0 ? `${$.idx + 1}` : "
 const hotsoonsignheaderArr = [],hotsoonsignkeyArr=[]
 const hotsoonadheaderArr = [],hotsoonadkeyArr=[]
 const hotsoonreadheaderArr = [],hotsoonreadkeyArr=[]
+<<<<<<< HEAD
 // let hotsoonsignheader = $.getdata('hotsoonsignheader')
 // let hotsoonsigncookie = $.getdata('hotsoonsigncookie')
 
@@ -53,11 +54,23 @@ let no = 1;
 let operate = 0;
 // let hotsoonreadheader = $.getdata('hotsoonreadheader')
 // let hotsoonreadkey = $.getdata('hotsoonreadkey')
+=======
+let hotsoonsignheader = $.getdata('hotsoonsignheader')
+let hotsoonsigncookie = $.getdata('hotsoonsigncookie')
+
+let hotsoonadheader = $.getdata('hotsoonadheader')
+let hotsoonadkey = $.getdata('hotsoonadkey')
+let no = 1;
+let operate = 0;
+let hotsoonreadheader = $.getdata('hotsoonreadheader')
+let hotsoonreadkey = $.getdata('hotsoonreadkey')
+>>>>>>> d8aa82de0a34782626624a66c2eab179d9ea84c8
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
 const logs =1;//0为关闭日志，1为开启
 var hour=''
 var minute=''
 
+<<<<<<< HEAD
 let hotsoonsignheader = ["version_code=7.6.2\&app_name=live_stream_lite\&vid=1F8F39A0-2042-4ADD-AE1F-205E8A3FEE51\&device_id=67631785771\&new_nav=0\&channel=App%20Store\&aid=1350\&ab_group=1568502\&screen_width=828\&client_request_id=aa8abb9d81c443702e447859fcb7b033\&openudid=77184f8febac74c6cf94e2618bca01e64d170d9e\&live_sdk_version=7.6.2\&update_version_code=7621\&os_api=18\&ws_status=CONNECTED\&ac=4G\&mccmnc=46007\&os_version=14.3\&client_version_code=762\&device_platform=iphone\&iid=3589218274131438\&device_type=iPhone11,8\&idfa=00000000-0000-0000-0000-000000000000"]
 let hotsoonsignkey = ['{"Accept-Encoding":"gzip, deflate","x-Tt-Token":"009b58c832927039e688bfd54643a10c5c04a72b8cf8a27954a9c5e3e813c65f2cf9351c2ba45ef5f3f7db5e592afcede4058acb0d5267e74bd181ee57fb435b86855e4ad9cb6b793c1efd5d27e1b197ee7e2d8b40e2dd4669d529407426c7f91743e-1.0.1","Connection":"keep-alive","Cookie":"passport_csrf_token=7c29cfe3b0a6c4b85b40e9361f08d72a; passport_csrf_token_default=7c29cfe3b0a6c4b85b40e9361f08d72a; install_id=3589218274131438; ttreq=1$3a5a53e40a2df4d98d2d83c07db214d3109de2d9; d_ticket=b8b9530e0930a707d9a346e6234da8ca47f75; odin_tt=abaebaff2790ab268d25f08f156ae4a70870757490278dccdc9db82c10d755745a02cd9f6fec1c09a6dea873f871e357335899c3af5a578c5c490ad8009891d9; n_mh=UQpvVN0AqfW7xzagzrxYbBdthPX7OZJPT3sNU3FHi6U; sid_guard=9b58c832927039e688bfd54643a10c5c%7C1610613947%7C5184000%7CMon%2C+15-Mar-2021+08%3A45%3A47+GMT; uid_tt=dd606d0ed44e98105406a4da120ce53d; uid_tt_ss=dd606d0ed44e98105406a4da120ce53d; sid_tt=9b58c832927039e688bfd54643a10c5c; sessionid=9b58c832927039e688bfd54643a10c5c; sessionid_ss=9b58c832927039e688bfd54643a10c5c; excgd=20210114","Host":"ib.snssdk.com","User-Agent":"HotsoonLite 7.6.2 rv:7621 (iPhone; iOS 14.3; zh_CN) Cronet","X-Khronos":"1610635581","sdk-version":"1","x-tt-trace-id":"00-015c9b1c09fbf2b272b99d5eaef20546-015c9b1c09fbf2b2-01","X-Gorgon":"84028031000060473eb776bc7388bf13202eea0973b8fede5dcd"}']
 let hotsoonreadheader = ["version_code=7.6.2\&app_name=live_stream_lite\&vid=1F8F39A0-2042-4ADD-AE1F-205E8A3FEE51\&device_id=67631785771\&new_nav=0\&channel=App%20Store\&aid=1350\&ab_group=1568502\&screen_width=828\&client_request_id=adea08646087cf35af20df0d2b89d35b\&openudid=77184f8febac74c6cf94e2618bca01e64d170d9e\&live_sdk_version=7.6.2\&update_version_code=7621\&os_api=18\&ws_status=CLOSED\&ac=4G\&mccmnc=46007\&os_version=14.3\&client_version_code=762\&device_platform=iphone\&iid=3589218274131438\&device_type=iPhone11,8\&idfa=00000000-0000-0000-0000-000000000000"]
@@ -65,6 +78,8 @@ let hotsoonreadkey = ['{"x-tt-trace-id":"00-015ce15a09fbf2b272b44d1278c70546-015
 let hotsoonadheader = ''
 let hotsoonadkey = ''
 
+=======
+>>>>>>> d8aa82de0a34782626624a66c2eab179d9ea84c8
 if ($.isNode()) {
    hour = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getHours();
    minute = new Date( new Date().getTime() + 8 * 60 * 60 * 1000 ).getMinutes();
@@ -80,6 +95,7 @@ if (isGetCookie) {
    $.done()
 } 
 if ($.isNode()) {
+<<<<<<< HEAD
 // //sign
 //   if (process.env.HOTSOONSIGNHEADER && process.env.HOTSOONSIGNHEADER.indexOf('#') > -1) {
 //    hotsoonsignheader = process.env.HOTSOONSIGNHEADER.split('#');
@@ -137,6 +153,65 @@ if ($.isNode()) {
 //   } else  {
 //    hotsoonreadkey = process.env.HOTSOONREADKEY.split()
 //   };
+=======
+//sign
+  if (process.env.HOTSOONSIGNHEADER && process.env.HOTSOONSIGNHEADER.indexOf('#') > -1) {
+   hotsoonsignheader = process.env.HOTSOONSIGNHEADER.split('#');
+   console.log(`您选择的是用"#"隔开\n`)
+  }
+  else if (process.env.HOTSOONSIGNHEADER && process.env.HOTSOONSIGNHEADER.indexOf('\n') > -1) {
+   hotsoonsignheader = process.env.HOTSOONSIGNHEADER.split('\n');
+   console.log(`您选择的是用换行隔开\n`)
+  } else {
+   hotsoonsignheader = process.env.HOTSOONSIGNHEADER.split()
+  };
+  if (process.env.HOTSOONSIGNKEY&& process.env.HOTSOONSIGNKEY.indexOf('#') > -1) {
+   hotsoonsignkey = process.env.HOTSOONSIGNKEY.split('#');
+  }
+  else if (process.env.HOTSOONSIGNKEY && process.env.HOTSOONSIGNKEY.split('\n').length > 0) {
+   hotsoonsignkey = process.env.HOTSOONSIGNKEY.split('\n');
+  } else  {
+   hotsignkey = process.env.HOTSOONSIGNKEY.split()
+  };
+//AD
+if (process.env.HOTSOONADHEADER && process.env.HOTSOONADHEADER.indexOf('#') > -1) {
+   hotsoonadheader = process.env.HOTSOONADHEADER.split('#');
+   console.log(`您选择的是用"#"隔开\n`)
+  }
+  else if (process.env.HOTSOONADHEADER && process.env.HOTSOONADHEADER.indexOf('\n') > -1) {
+   hotsoonadheader = process.env.HOTSOONADHEADER.split('\n');
+   console.log(`您选择的是用换行隔开\n`)
+  } else {
+   hotsoonadheader = process.env.HOTSOONADHEADER.split()
+  };
+  if (process.env. HOTSOONADKEY&& process.env.HOTSOONADKEY.indexOf('#') > -1) {
+   hotsoonadkey = process.env.HOTSOONADKEY.split('#');
+  }
+  else if (process.env.HOTSOONADKEY && process.env.HOTSOONADKEY.split('\n').length > 0) {
+   hotsoonadkey = process.env.HOTSOONADKEY.split('\n');
+  } else  {
+   hotsoonadkey = process.env.HOTSOONADKEY.split()
+  };
+//video
+if (process.env.HOTSOONREADHEADER && process.env.HOTSOONREADHEADER.indexOf('#') > -1) {
+   hotsoonreadheader = process.env.HOTSOONREADHEADER.split('#');
+   console.log(`您选择的是用"#"隔开\n`)
+  }
+  else if (process.env.HOTSOONREADHEADER && process.env.HOTSOONREADHEADER.indexOf('\n') > -1) {
+   hotsoonreadheader = process.env.HOTSOONREADHEADER.split('\n');
+   console.log(`您选择的是用换行隔开\n`)
+  } else {
+   hotsoonreadheader = process.env.HOTSOONREADHEADER.split()
+  };
+  if (process.env. HOTSOONREADKEY&& process.env.HOTSOONREADKEY.indexOf('#') > -1) {
+   hotsoonreadkey = process.env.HOTSOONREADKEY.split('#');
+  }
+  else if (process.env.HOTSOONREADKEY && process.env.HOTSOONREADKEY.split('\n').length > 0) {
+   hotsoonreadkey = process.env.HOTSOONREADKEY.split('\n');
+  } else  {
+   hotsoonreadkey = process.env.HOTSOONREADKEY.split()
+  };
+>>>>>>> d8aa82de0a34782626624a66c2eab179d9ea84c8
 //sign
   Object.keys(hotsoonsignheader).forEach((item) => {
         if (hotsoonsignheader[item]) {
