@@ -32,10 +32,21 @@ const $ = Env(zhiyi)
 let status, videoid, myid, supportvideoid, supportrank, show;
 status = (status = ($.getval("rlstatus") || "1")) > 1 ? `${status}` : ""; // 账号扩展字符
 const rlurlArr = [], rlheaderArr = [], rlbodyArr = []
-let rlurl = $.getdata('rlurl')
-let rlheader = $.getdata('rlheader')
-let rlbody = $.getdata('rlbody')
-let rlbody = $.getdata('rlbody')
+// let rlurl = $.getdata('rlurl')
+// let rlheader = $.getdata('rlheader')
+// let rlbody = $.getdata('rlbody')
+// 1 15207163636 2 13734699410 3 18610810302 4
+let rlurl = ["access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=194763&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTQwNDc3MzIsImV4cCI6MzIyODA5NTQ2NCwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTQ3NjMsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc1ODE5MjM0NyIsIm1vYmlsZSI6IjE1MjA3MTYzNjM2In19.LcuHiDjjTyT3Mwru8xz5x4FZxAi5AEha2_44GP9pwzc&video_id=27818",
+"access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=194778&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTMzNjk2NTEsImV4cCI6MzIyNjczOTMwMiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTQ3NzgsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzcwODIzNDUxOSIsIm1vYmlsZSI6IjEzNzM0Njk5NDEwIn19.UiipIljd6pc-vsDWePNsAlhUq00PlsNCYGfFqSs6P40&video_id=41137",
+"access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=199061&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTM3MzY3NjgsImV4cCI6MzIyNzQ3MzUzNiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTkwNjEsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc5MjU4NDEzMCIsIm1vYmlsZSI6IjE4NjEwODEwMzAyIn19.OMaD0HmZHLpX173nOwWAzXiIKahKpDBtDYKhDqXfDpE&video_id=28496",
+]
+let rlheader = [{'Host':'ranlv.lvfacn.com','accept':'*/*','user-agent':'ranlushipin/1.0.49(iPhone;iOS14.3;Scale/2.00)','accept-language':'zh-Hans-CN;q=1,en-CN;q=0.9','Cookie':'acw_tc=df6f181516140471385893404ebc5dbf8a720d33bf155c2a1c9ffdbf9b'},
+	{"Cookie":"view_30558=30558; view_36291=36291; view_39119=39119; acw_tc=df6f181b16133692656098596eda650c44a52b06b7dd0a9b145085be2a","Accept":"*/*","Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","Host":"ranlv.lvfacn.com","User-Agent":"ran lu shi pin/1.0.49 (iPhone; iOS 14.3; Scale/2.00)","Content-Length":"0","Accept-Language":"zh-Hans-CN;q=1, en-CN;q=0.9"},
+	{"Cookie":"view_34656=34656; view_39205=39205; view_37553=37553; view_43625=43625; acw_tc=9903e79616137367547342731e40cc9b05f94c258913672d8dc3e6769d","Accept":"*/*","Connection":"keep-alive","Accept-Encoding":"br, gzip, deflate","Host":"ranlv.lvfacn.com","User-Agent":"ran lu shi pin/1.0.49 (iPhone; iOS 12.2; Scale/3.00)","Content-Length":"0","Accept-Language":"zh-Hans-CN;q=1"},]
+let rlbody = [15207163636,13734699410,18610810302]
+
+
+
 let tz = ($.getval('tz') || '1');//0关闭通知，1默认开启
 let cash = ($.getval('rlcash') || '0')//默认不自动提现
 const invite = 0;//新用户自动邀请，0关闭，1默认开启
@@ -56,36 +67,51 @@ if (isGetCookie) {
     $.done()
 }
 if ($.isNode()) {
-    if (process.env.RLURL && process.env.RLURL.indexOf('#') > -1) {
-        rlurl = process.env.RLURL.split('#');
-        console.log(`您选择的是用"#"隔开\n`)
-    }
-    else if (process.env.RLURL && process.env.RLURL.indexOf('\n') > -1) {
-        rlurl = process.env.RLURL.split('\n');
-        console.log(`您选择的是用换行隔开\n`)
-    } else {
-        rlurl = process.env.RLURL.split()
-    };
-    if (process.env.RLHEADER && process.env.RLHEADER.indexOf('#') > -1) {
-        rlheader = process.env.RLHEADER.split('#');
-        console.log(`您选择的是用"#"隔开\n`)
-    }
-    else if (process.env.RLHEADER && process.env.RLHEADER.indexOf('\n') > -1) {
-        rlheader = process.env.RLHEADER.split('\n');
-        console.log(`您选择的是用换行隔开\n`)
-    } else {
-        rlheader = process.env.RLHEADER.split()
-    };
-    if (process.env.RLBODY && process.env.RLBODY.indexOf('#') > -1) {
-        rlbody = process.env.RLBODY.split('#');
-        console.log(`您选择的是用"#"隔开\n`)
-    }
-    else if (process.env.RLBODY && process.env.RLBODY.indexOf('\n') > -1) {
-        rlbody = process.env.RLBODY.split('\n');
-        console.log(`您选择的是用换行隔开\n`)
-    } else {
-        rlbody = process.env.RLBODY.split()
-    };
+	Object.keys(rlurl).forEach((item) => {
+        if (rlurl[item]) {
+          rlurlArr.push(rlurl[item])
+        }
+      })
+    Object.keys(rlheader).forEach((item) => {
+        if (rlheader[item]) {
+          rlheaderArr.push(JSON.stringify(rlheader[item]))
+        }
+      })
+    Object.keys(rlbody).forEach((item) => {
+        if (rlbody[item]) {
+          rlbodyArr.push(rlbody[item])
+        }
+      });
+    // if (process.env.RLURL && process.env.RLURL.indexOf('#') > -1) {
+    //     rlurl = process.env.RLURL.split('#');
+    //     console.log(`您选择的是用"#"隔开\n`)
+    // }
+    // else if (process.env.RLURL && process.env.RLURL.indexOf('\n') > -1) {
+    //     rlurl = process.env.RLURL.split('\n');
+    //     console.log(`您选择的是用换行隔开\n`)
+    // } else {
+    //     rlurl = process.env.RLURL.split()
+    // };
+    // if (process.env.RLHEADER && process.env.RLHEADER.indexOf('#') > -1) {
+    //     rlheader = process.env.RLHEADER.split('#');
+    //     console.log(`您选择的是用"#"隔开\n`)
+    // }
+    // else if (process.env.RLHEADER && process.env.RLHEADER.indexOf('\n') > -1) {
+    //     rlheader = process.env.RLHEADER.split('\n');
+    //     console.log(`您选择的是用换行隔开\n`)
+    // } else {
+    //     rlheader = process.env.RLHEADER.split()
+    // };
+    // if (process.env.RLBODY && process.env.RLBODY.indexOf('#') > -1) {
+    //     rlbody = process.env.RLBODY.split('#');
+    //     console.log(`您选择的是用"#"隔开\n`)
+    // }
+    // else if (process.env.RLBODY && process.env.RLBODY.indexOf('\n') > -1) {
+    //     rlbody = process.env.RLBODY.split('\n');
+    //     console.log(`您选择的是用换行隔开\n`)
+    // } else {
+    //     rlbody = process.env.RLBODY.split()
+    // };
     console.log(`============ 脚本执行-国际标准时间(UTC)：${new Date().toLocaleString()}  =============\n`)
     console.log(`============ 脚本执行-北京时间(UTC+8)：${new Date(new Date().getTime() + 8 * 60 * 60 * 1000).toLocaleString()}  =============\n`)
 } else {

@@ -23,12 +23,6 @@ let TG_BOT_TOKEN = '1347008371:AAE9lvHp5yB0jPVtuhL20G13AlQ5Xbnen6E';
 //注：此处设置github action用户填写到Settings-Secrets里面(Name输入TG_USER_ID)
 let TG_USER_ID = '995328749';
 
-let TG_BOT_TOKEN = '';
-//此处填你接收通知消息的telegram用户的id，例如：129xxx206
-//注：此处设置github action用户填写到Settings-Secrets里面(Name输入TG_USER_ID)
-let TG_USER_ID = '';
-
-
 // =======================================钉钉机器人通知设置区域===========================================
 //此处填你钉钉 bot 的webhook，例如：5a544165465465645d0f31dca676e7bd07415asdasd
 //注：此处设置github action用户填写到Settings-Secrets里面(Name输入DD_BOT_TOKEN)

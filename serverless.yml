@@ -34,12 +34,12 @@ inputs:
           cronExpression: "0 30 7-23 * * * *"
           enable: true
           argument: baidu_speed
-    # - timer: # 签到
-    #     parameters:
-    #       name: Youth_Read4_Auto_Kuaishou
-    #       cronExpression: "0 0 10,15,20 * * * *"
-    #       enable: true
-    #       argument: Youth_Read4&Auto_Kuaishou
+    - timer: # 签到
+        parameters:
+          name: ranlv
+          cronExpression: "0 */20 7-22 * * * *"
+          enable: true
+          argument: ranlv
     # - timer: # 签到
     #     parameters:
     #       name: Youth_Read5_Auto_Kuaishou
