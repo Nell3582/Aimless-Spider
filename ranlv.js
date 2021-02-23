@@ -36,14 +36,24 @@ const rlurlArr = [], rlheaderArr = [], rlbodyArr = []
 // let rlheader = $.getdata('rlheader')
 // let rlbody = $.getdata('rlbody')
 // 1 15207163636 2 13734699410 3 18610810302 4
-let rlurl = ["access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=194763&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTQwNDc3MzIsImV4cCI6MzIyODA5NTQ2NCwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTQ3NjMsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc1ODE5MjM0NyIsIm1vYmlsZSI6IjE1MjA3MTYzNjM2In19.LcuHiDjjTyT3Mwru8xz5x4FZxAi5AEha2_44GP9pwzc&video_id=27818",
-"access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=194778&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTMzNjk2NTEsImV4cCI6MzIyNjczOTMwMiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTQ3NzgsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzcwODIzNDUxOSIsIm1vYmlsZSI6IjEzNzM0Njk5NDEwIn19.UiipIljd6pc-vsDWePNsAlhUq00PlsNCYGfFqSs6P40&video_id=41137",
-"access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=199061&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTM3MzY3NjgsImV4cCI6MzIyNzQ3MzUzNiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTkwNjEsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc5MjU4NDEzMCIsIm1vYmlsZSI6IjE4NjEwODEwMzAyIn19.OMaD0HmZHLpX173nOwWAzXiIKahKpDBtDYKhDqXfDpE&video_id=28496",
+let rlurl = [
+    "access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=194763&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTQwNDc3MzIsImV4cCI6MzIyODA5NTQ2NCwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTQ3NjMsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc1ODE5MjM0NyIsIm1vYmlsZSI6IjE1MjA3MTYzNjM2In19.LcuHiDjjTyT3Mwru8xz5x4FZxAi5AEha2_44GP9pwzc&video_id=27818",
+    "access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=194778&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTMzNjk2NTEsImV4cCI6MzIyNjczOTMwMiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTQ3NzgsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzcwODIzNDUxOSIsIm1vYmlsZSI6IjEzNzM0Njk5NDEwIn19.UiipIljd6pc-vsDWePNsAlhUq00PlsNCYGfFqSs6P40&video_id=41137",
+    "access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=199061&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTM3MzY3NjgsImV4cCI6MzIyNzQ3MzUzNiwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoxOTkwNjEsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc5MjU4NDEzMCIsIm1vYmlsZSI6IjE4NjEwODEwMzAyIn19.OMaD0HmZHLpX173nOwWAzXiIKahKpDBtDYKhDqXfDpE&video_id=28496",
+    "access_token=f2e1d57418bb3d6a0439b494f3468a75&client=1&member_id=202264&user_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJSYW5sdiBKV1QiLCJpYXQiOjE2MTQwODMwMzcsImV4cCI6MzIyODE2NjA3NCwiYXVkIjoiUmFubHYiLCJzdWIiOiJSYW5sdiIsImRhdGEiOnsibWVtYmVyX2lkIjoyMDIyNjQsImF2YXRhciI6Imh0dHA6XC9cL3Jhbmx2Lmx2ZmFjbi5jb21cL3N0YXRpY1wvbW9kdWxlXC9hZG1pblwvaW1nXC9kZWZhdWx0X2hlYWQuanBnIiwibmlja25hbWUiOiJcdTc1MjhcdTYyMzc0MzUyODYwMSIsIm1vYmlsZSI6IjE1ODYyMTI1OTc5In19.r_5duzDAFtH1xTncS4QO1X8LlWPb8JMtKoBbvFvXAKQ&video_id=31239"
 ]
-let rlheader = [{'Host':'ranlv.lvfacn.com','accept':'*/*','user-agent':'ranlushipin/1.0.49(iPhone;iOS14.3;Scale/2.00)','accept-language':'zh-Hans-CN;q=1,en-CN;q=0.9','Cookie':'acw_tc=df6f181516140471385893404ebc5dbf8a720d33bf155c2a1c9ffdbf9b'},
-	{"Cookie":"view_30558=30558; view_36291=36291; view_39119=39119; acw_tc=df6f181b16133692656098596eda650c44a52b06b7dd0a9b145085be2a","Accept":"*/*","Connection":"keep-alive","Accept-Encoding":"gzip, deflate, br","Host":"ranlv.lvfacn.com","User-Agent":"ran lu shi pin/1.0.49 (iPhone; iOS 14.3; Scale/2.00)","Content-Length":"0","Accept-Language":"zh-Hans-CN;q=1, en-CN;q=0.9"},
-	{"Cookie":"view_34656=34656; view_39205=39205; view_37553=37553; view_43625=43625; acw_tc=9903e79616137367547342731e40cc9b05f94c258913672d8dc3e6769d","Accept":"*/*","Connection":"keep-alive","Accept-Encoding":"br, gzip, deflate","Host":"ranlv.lvfacn.com","User-Agent":"ran lu shi pin/1.0.49 (iPhone; iOS 12.2; Scale/3.00)","Content-Length":"0","Accept-Language":"zh-Hans-CN;q=1"},]
-let rlbody = [15207163636,13734699410,18610810302]
+let rlheader = [{ 'Host': 'ranlv.lvfacn.com', 'accept': '*/*', 'user-agent': 'ranlushipin/1.0.49(iPhone;iOS14.3;Scale/2.00)', 'accept-language': 'zh-Hans-CN;q=1,en-CN;q=0.9', 'Cookie': 'acw_tc=df6f181516140471385893404ebc5dbf8a720d33bf155c2a1c9ffdbf9b' },
+{ "Cookie": "view_30558=30558; view_36291=36291; view_39119=39119; acw_tc=df6f181b16133692656098596eda650c44a52b06b7dd0a9b145085be2a", "Accept": "*/*", "Connection": "keep-alive", "Accept-Encoding": "gzip, deflate, br", "Host": "ranlv.lvfacn.com", "User-Agent": "ran lu shi pin/1.0.49 (iPhone; iOS 14.3; Scale/2.00)", "Content-Length": "0", "Accept-Language": "zh-Hans-CN;q=1, en-CN;q=0.9" },
+{ "Cookie": "view_34656=34656; view_39205=39205; view_37553=37553; view_43625=43625; acw_tc=9903e79616137367547342731e40cc9b05f94c258913672d8dc3e6769d", "Accept": "*/*", "Connection": "keep-alive", "Accept-Encoding": "br, gzip, deflate", "Host": "ranlv.lvfacn.com", "User-Agent": "ran lu shi pin/1.0.49 (iPhone; iOS 12.2; Scale/3.00)", "Content-Length": "0", "Accept-Language": "zh-Hans-CN;q=1" },
+{
+    'Host': 'ranlv.lvfacn.com',
+    'accept': '*/*',
+    'user-agent': 'ran lu shi pin/1.0.49 (iPhone; iOS 14.3; Scale/2.00)',
+    'accept-language': 'zh-Hans-CN;q=1, en-CN;q=0.9',
+    'Cookie': 'view_39296=39296; acw_tc=df6f181a16140828883237670ed7ee5e9f65c7d42b875c4dd25909ef84; view_42656=42656'
+}
+]
+let rlbody = [15207163636, 13734699410, 18610810302, 15207163636]
 
 
 
@@ -67,21 +77,21 @@ if (isGetCookie) {
     $.done()
 }
 if ($.isNode()) {
-	Object.keys(rlurl).forEach((item) => {
+    Object.keys(rlurl).forEach((item) => {
         if (rlurl[item]) {
-          rlurlArr.push(rlurl[item])
+            rlurlArr.push(rlurl[item])
         }
-      })
+    })
     Object.keys(rlheader).forEach((item) => {
         if (rlheader[item]) {
-          rlheaderArr.push(JSON.stringify(rlheader[item]))
+            rlheaderArr.push(JSON.stringify(rlheader[item]))
         }
-      })
+    })
     Object.keys(rlbody).forEach((item) => {
         if (rlbody[item]) {
-          rlbodyArr.push(rlbody[item])
+            rlbodyArr.push(rlbody[item])
         }
-      });
+    });
     // if (process.env.RLURL && process.env.RLURL.indexOf('#') > -1) {
     //     rlurl = process.env.RLURL.split('#');
     //     console.log(`您选择的是用"#"隔开\n`)
