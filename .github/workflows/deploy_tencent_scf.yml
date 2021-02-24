@@ -1,6 +1,11 @@
-name: 部署到腾讯云函数
+name: 云端自动部署到腾讯云函数
 
 on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
