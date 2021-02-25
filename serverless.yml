@@ -20,7 +20,7 @@ inputs:
         parameters:
           name: iboxpay2
           cronExpression: "0 */15 6-23 * * * *"
-          enable: true
+          enable: false
           argument: iboxpay2
     - timer: # 签到
         parameters:
@@ -48,10 +48,10 @@ inputs:
     #       argument: Youth_Read5&Auto_Kuaishou
     - timer: # 签到
         parameters:
-          name: dkd_iboxplay
+          name: dkd
           cronExpression: "0 */15 6-23 * * * *"
           enable: true
-          argument: dkd&iboxpay
+          argument: dkd
     - timer: # 签到
         parameters:
           name: hotsoon
