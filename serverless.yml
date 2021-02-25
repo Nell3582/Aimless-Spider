@@ -56,7 +56,7 @@ inputs:
         parameters:
           name: hotsoon
           cronExpression: "0 */6 6-23 * * * *"
-          enable: true
+          enable: false
           argument: hotsoon
   environment: #  环境变量
     variables: #  环境变量对象
