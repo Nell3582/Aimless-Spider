@@ -6,7 +6,7 @@ name: 笑谱短视频
 on:
   workflow_dispatch:
   schedule:
-     - cron: '*/30 0-15 * * *'
+     - cron: '*/20 0-17 * * *'
   watch:
     types: started
 
@@ -29,7 +29,7 @@ jobs:
       - name: npm install
         run: |
           npm install
-      - name: '运行 【中青看点】'
+      - name: '运行 【笑谱短视频】'
         run: |
           node iboxpay.js
         env:
